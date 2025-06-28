@@ -1,14 +1,14 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Noto_Sans_Thai } from "next/font/google";
+
+import "bootstrap/dist/css/bootstrap.min.css"
 import "./globals.css";
+import BootstrapClient from "./components/BootstrapClient";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const notoSansThai = Noto_Sans_Thai({
+  variable: "--font-noto-sans-thai",
+  subsets: ["thai", "latin"],
+  weight: ["100", "300", "400", "500", "700", "900"],
+  display: "swap",
 });
 
 export const metadata = {
@@ -19,8 +19,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${notoSansThai.variable}`}>
         {children}
+        <BootstrapClient />
       </body>
     </html>
   );
