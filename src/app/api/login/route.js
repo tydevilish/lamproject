@@ -2,7 +2,6 @@ import bcrypt from "bcryptjs";
 import clientPromise from "../../../../lib/mongodb";
 import { NextResponse } from "next/server";
 import jwt from "jsonwebtoken";
-import { cookies } from "next/headers";
 
 
 export async function POST(req) {

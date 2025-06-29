@@ -46,7 +46,7 @@ export default function Login() {
     useEffect(() => {
         async function checkLogin() {
             const res = await fetch("/api/me", {
-                method: "POST",
+                method: "GET",
                 credentials: "include",
             });
 
